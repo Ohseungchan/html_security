@@ -1,3 +1,3 @@
-# JavaScriptHash
-SHA256
+# JavaScriptAES256
+JavaScriptAES256
  
