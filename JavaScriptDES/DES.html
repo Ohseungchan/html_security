@@ -16,7 +16,9 @@ function encryptDesCbcPkcs7Padding(message, key) {
 }
 
 function decryptDesCbcPkcs7Padding(message, key) {
+    // UTF8 형식으로 암호화
     var keyWords = CryptoJS.enc.Utf8.parse(key);
+    // WordArray
     var ivWords = CryptoJS.lib.WordArray.create([0, 0]);
 
     var decrypted = CryptoJS.DES.decrypt({ciphertext: message}, keyWords, { iv: ivWords });
@@ -51,6 +53,8 @@ console.log("Final decrypted: ", finalDecrypted);
 //alert("Final decrypted: " + finalDecrypted);
 document.getElementById("emessage").textContent = decrypted;
 }
+
+
 
 </script>
 
